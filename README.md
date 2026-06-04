@@ -1,3 +1,3 @@
 # hellow world
 saluda mundo
-USO: HTML, CSS, GIT, GITHUB.
+USO: HTML, CSS, GIT, JS GITHUB.
