@@ -37,79 +37,7 @@
       <h2>Contacto</h2>
       <p>Escríbenos para trabajar juntos en tu próximo proyecto.</p>
     </section>
-
-    <section class="profile-chat card" aria-label="Chatbot del perfil">
-      <h2>Chat del perfil</h2>
-
-      <div id="profileChatMessages" class="profile-chat__messages">
-        <p class="profile-chat__message profile-chat__message--bot">
-          Hola, soy el asistente del portafolio. Preguntame sobre habilidades, proyectos o contacto.
-        </p>
-      </div>
-
-      <form id="profileChatForm" class="profile-chat__form">
-        <input
-          id="profileChatInput"
-          class="profile-chat__input"
-          type="text"
-          placeholder="Escribí tu pregunta..."
-          autocomplete="off"
-        >
-        <button class="profile-chat__button" type="submit">Enviar</button>
-      </form>
-    </section>
   </div>
 
-  <script>
-    const profileChatForm = document.getElementById("profileChatForm");
-    const profileChatInput = document.getElementById("profileChatInput");
-    const profileChatMessages = document.getElementById("profileChatMessages");
-
-    profileChatForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const userText = profileChatInput.value.trim();
-
-      if (userText === "") {
-        return;
-      }
-
-      addProfileChatMessage(userText, "user");
-      addProfileChatMessage(getProfileBotResponse(userText), "bot");
-
-      profileChatInput.value = "";
-      profileChatInput.focus();
-    });
-
-    function addProfileChatMessage(text, sender) {
-      const message = document.createElement("p");
-      message.className = `profile-chat__message profile-chat__message--${sender}`;
-      message.textContent = text;
-      profileChatMessages.appendChild(message);
-      profileChatMessages.scrollTop = profileChatMessages.scrollHeight;
-    }
-
-    function getProfileBotResponse(text) {
-      const question = text.toLowerCase();
-
-      if (question.includes("habilidad") || question.includes("skills")) {
-        return "Mis habilidades incluyen HTML, CSS, JavaScript y desarrollo web básico.";
-      }
-
-      if (question.includes("proyecto") || question.includes("portafolio")) {
-        return "He trabajado en páginas web, portafolios personales y prácticas usando Docker.";
-      }
-
-      if (question.includes("contacto") || question.includes("email") || question.includes("correo")) {
-        return "Podés contactarme por correo o por mis redes profesionales.";
-      }
-
-      if (question.includes("hola") || question.includes("buenas")) {
-        return "Hola, gracias por visitar mi portafolio. ¿Qué querés saber sobre mí?";
-      }
-
-      return "Puedo responder preguntas sobre mis habilidades, proyectos y contacto.";
-    }
-  </script>
 </body>
 </html>
