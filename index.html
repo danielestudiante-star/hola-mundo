@@ -4,10 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Página con Pestañas</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./stilos.css">
+  <script src="js.js" defer></script>
 </head>
-<body>
 
+<body>
+<button id="chatbotButton" class="chatbot-button">💬 Chat</button>
+
+<div id="chatbotBox" class="chatbot-box">
+  <div class="chatbot-header">
+    <h3>Chat del Perfil</h3>
+    <button id="chatbotClose">X</button>
+  </div>
+
+  <div id="chatbotMessages" class="chatbot-messages">
+    <div class="message message--bot">
+      Hola, soy el chatbot de Daniel. Pregúntame sobre mis habilidades, proyectos o contacto.
+    </div>
+  </div>
+
+  <div class="chatbot__suggestions">
+    <button data-question="habilidades">Habilidades</button>
+    <button data-question="proyectos">Proyectos</button>
+    <button data-question="contacto">Contacto</button>
+  </div>
+
+  <form id="chatbotForm" class="chatbot-form">
+    <input id="chatbotInput" type="text" placeholder="Escribe tu pregunta...">
+    <button type="submit">Enviar</button>
+  </form>
+</div>
   <div class="container">
     <h1>Mi Página Web</h1>
 

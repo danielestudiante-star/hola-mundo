@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #667eea;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.tabs a {
+  text-decoration: none;
+  background: #667eea;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.tabs a:hover {
+  background: #764ba2;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+}
+.chatbot-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 1000;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #764ba2;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chatbot-box {
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 85px;
+  width: 320px;
+  background: white;
+  color: #333;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.30);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.chatbot-box.is-open {
+  display: block;
+}
+.chatbot-header {
+  background: #667eea;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h3 {
+  margin: 0;
+}
+
+.chatbot-header button {
+  border: none;
+  background: white;
+  color: #667eea;
+  border-radius: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.chatbot-messages {
+  height: 220px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.message--bot {
+  background: #eeeeee;
+}
+
+.message--user {
+  background: #667eea;
+  color: white;
+  text-align: right;
+}
+
+.chatbot__suggestions {
+  padding: 10px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chatbot__suggestions button {
+  padding: 7px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.chatbot-form {
+  display: flex;
+  padding: 10px;
+  gap: 8px;
+}
+
+.chatbot-form input {
+  flex: 1;
+  padding: 10px;
+}
+
+.chatbot-form button {
+  padding: 10px;
+  border: none;
+  background: #764ba2;
+  color: white;
+  cursor: pointer;
+}
