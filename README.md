@@ -1,6 +1,10 @@
-# Hola Mundo
+# Mi Pagina WEB personal
+- Creada con:
+- HTML
+- CSS
+- JAVA SCRIPT.
 
-Proyecto de portafolio web desarrollado con HTML, CSS y JavaScript.
+Publicada con Github Pages.
 
 ## Tecnologías utilizadas
 
